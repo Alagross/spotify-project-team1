@@ -23,6 +23,7 @@
         android:paddingLeft="2dp"
         android:paddingRight="2dp"
         android:text="DuoWrapped"
+        android:backgroundTint="#8BC34A"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exploreButton"
@@ -55,7 +56,6 @@
         android:paddingRight="2dp"
         app:cornerRadius="10dp"
         android:text="Explore"
-        android:backgroundTint="#8BC34A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/streamButton"
         app:layout_constraintTop_toTopOf="parent"
@@ -70,7 +70,6 @@
         android:paddingRight="2dp"
         android:text="Stream"
         app:cornerRadius="10dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
