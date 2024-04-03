@@ -21,6 +21,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Login"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".myWrapped"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".duoWrapped"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Explore"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Stream"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
