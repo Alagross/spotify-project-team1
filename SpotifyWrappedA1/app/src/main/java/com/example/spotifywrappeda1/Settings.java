@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class Settings extends AppCompatActivity {
     ImageButton backBtn;
-    Button darkModeButton;
+    Button darkModeBtn;
     static boolean darkMode = false;
 
     @SuppressLint("WrongViewCast")
@@ -30,8 +30,9 @@ public class Settings extends AppCompatActivity {
                     }
                 }
         );
-        darkModeButton = findViewById(R.id.darkModeButton);
-        darkModeButton.setOnClickListener(
+        // Dark Mode Button: switches the theme for the app when clicked
+        darkModeBtn = findViewById(R.id.darkModeButton);
+        darkModeBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
