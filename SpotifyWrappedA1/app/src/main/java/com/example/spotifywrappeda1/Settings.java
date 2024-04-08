@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
 
 public class Settings extends AppCompatActivity {
     ImageButton backBtn;
+    Button darkModeButton;
+    static boolean darkMode = false;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -24,6 +27,21 @@ public class Settings extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent i = new Intent(Settings.this,myWrapped.class);
                         startActivity(i);
+                    }
+                }
+        );
+        darkModeButton = findViewById(R.id.darkModeButton);
+        darkModeButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!(darkMode)) {
+                            darkMode = true;
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        } else {
+                            darkMode = false;
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        }
                     }
                 }
         );
