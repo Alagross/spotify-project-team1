@@ -11,7 +11,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
+// Make sure to change as necessary when implementing Firebase and Spotify API
         Button loginBtn = findViewById(R.id.loginButton);
         loginBtn.setOnClickListener(
                 new View.OnClickListener() {
