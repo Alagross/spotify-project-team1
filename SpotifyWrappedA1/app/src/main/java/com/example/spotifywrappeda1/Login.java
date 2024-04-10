@@ -32,9 +32,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
     private static final String TAG = "Login";
-    EditText email;
-    EditText password;
+    EditText editTextEmail;
+    EditText editTextPassword;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    FirebaseAuth mAuth;
     DatabaseReference ref = database.getReference("server/saving-data/cs2340project2");
 
     @SuppressLint("MissingInflatedId")
@@ -42,21 +43,34 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        mAuth = FirebaseAuth.getInstance();
         Button loginBtn = findViewById(R.id.loginButton);
-        email = findViewById(R.id.emailEditText);
-        password = findViewById(R.id.passwordEditText);
+        editTextEmail = findViewById(R.id.emailEditText);
+        editTextPassword = findViewById(R.id.passwordEditText);
 
         loginBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        String email = editTextEmail.getText().toString();
+                        String password = editTextPassword.getText().toString();
+                        mAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(task -> {
+                                    if (task.isSuccessful()) {
+                                        // Login successful
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        // Proceed with your app logic or UI update
+                                    } else {
+                                        // Login failed
+                                        // Display appropriate error message to the user
+                                    }
+                                });
                         Intent i = new Intent(getApplicationContext(), myWrapped.class);
                         startActivity(i);
                         finish();
                     }
                 }
         );
-
     }
     public void checkCurrentUser() {
         // [START check_current_user]
