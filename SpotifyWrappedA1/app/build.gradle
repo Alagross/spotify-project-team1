@@ -15,8 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        manifestPlaceholders = [redirectSchemeName: "SpotifyWrappedA1", redirectHostName: "auth"]
-
+        manifestPlaceholders = [redirectSchemeName: "Spotify-SDK", redirectHostName: "auth"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,6 +43,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // added by gavin
+    implementation 'com.google.code.gson:gson:2.8.8'
+
     //Firebase BoM (Added by Sam)
     implementation platform('com.google.firebase:firebase-bom:32.8.0')
     //CHECK Add the dependencies for Firebase products you want to use
