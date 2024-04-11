@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,7 @@ public class Login extends AppCompatActivity {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     FirebaseAuth mAuth;
     DatabaseReference ref = database.getReference("server/saving-data/cs2340project2");
+    TextView textViewError = findViewById(R.id.textViewError);
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,6 +49,7 @@ public class Login extends AppCompatActivity {
         Button loginBtn = findViewById(R.id.loginButton);
         editTextEmail = findViewById(R.id.emailEditText);
         editTextPassword = findViewById(R.id.passwordEditText);
+
 
         loginBtn.setOnClickListener(
                 new View.OnClickListener() {
@@ -63,6 +66,8 @@ public class Login extends AppCompatActivity {
                                     } else {
                                         // Login failed
                                         // Display appropriate error message to the user
+                                        textViewError.setText("Invalid email or password");
+                                        textViewError.setVisibility(View.VISIBLE);
                                     }
                                 });
                         Intent i = new Intent(getApplicationContext(), myWrapped.class);
