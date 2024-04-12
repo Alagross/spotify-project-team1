@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="green">#1DB954</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">SpotifyWrappedA1</string>
+    <string name="app_password_hint">App Password</string>
+    <string name="gcm_defaultSenderId" translatable="false">808642065863</string>
+    <string name="google_api_key" translatable="false">AIzaSyBHgNl8rjIdqobJp1eFqJmcmysseAGVhjQ</string>
+    <string name="google_app_id" translatable="false">1:808642065863:android:fd02c5ec1ec2c48b7555e2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBHgNl8rjIdqobJp1eFqJmcmysseAGVhjQ</string>
+    <string name="google_storage_bucket" translatable="false">cs2340project2-1d225.appspot.com</string>
+    <string name="login_button_text">Log In</string>
+    <string name="project_id" translatable="false">cs2340project2-1d225</string>
+    <style name="Base.Theme.SpotifyWrappedA1" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="colorPrimary">@color/green</item>
+    </style>
+    <style name="Theme.SpotifyWrappedA1" parent="Base.Theme.SpotifyWrappedA1"/>
+</resources>
