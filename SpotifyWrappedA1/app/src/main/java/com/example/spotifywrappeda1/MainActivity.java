@@ -38,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tokenTextView, codeTextView, profileTextView;
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.firstpage);
+
 
 //        // Initialize the views
 //        tokenTextView = (TextView) findViewById(R.id.token_text_view);

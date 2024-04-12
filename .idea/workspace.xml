@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1b841cc5-a320-4a10-b53c-f3a15fc1e38e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sam2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }

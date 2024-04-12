@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SpotifyWrappedA1</string>
+    <string name="app_password_hint">App Password</string>
+    <string name="login_button_text">Log In</string>
 </resources>
