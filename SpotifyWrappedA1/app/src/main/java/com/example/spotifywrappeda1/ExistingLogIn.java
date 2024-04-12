@@ -47,7 +47,7 @@ public class ExistingLogIn extends AppCompatActivity {
         String username = editTextUsername.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        // Add your validation logic here
+        // Todo: Add your validation logic here
         // For demo purposes, let's consider the credentials are valid if both fields are not empty
         return !username.isEmpty() && !password.isEmpty();
     }
