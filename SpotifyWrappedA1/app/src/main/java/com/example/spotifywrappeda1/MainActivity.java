@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tokenTextView, codeTextView, profileTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         tokenTextView = (TextView) findViewById(R.id.token_text_view);
         codeTextView = (TextView) findViewById(R.id.code_text_view);
         profileTextView = (TextView) findViewById(R.id.response_text_view);
+        Button btnShortTerm = findViewById(R.id.buttonTopTracksShortTerm);
+        Button btnMediumTerm = findViewById(R.id.buttonTopTracksMediumTerm);
+        Button btnLongTerm = findViewById(R.id.buttonTopTracksLongTerm);
+        profileTextView = findViewById(R.id.textViewResults);
+
+        btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term"));
+        btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term"));
+        btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term"));
 
         // Initialize the buttons
         Button tokenBtn = (Button) findViewById(R.id.token_btn);
@@ -194,4 +203,36 @@ public class MainActivity extends AppCompatActivity {
         cancelCall();
         super.onDestroy();
     }
+
+    private void fetchTopItems(String timeRange) {
+        if (mAccessToken == null) {
+            Toast.makeText(this, "Access Token is not available. Please get the token first.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String url = "https://api.spotify.com/v1/me/top/tracks?time_range=" + timeRange;
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Authorization", "Bearer " + mAccessToken)
+                .build();
+
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                runOnUiThread(() -> profileTextView.setText("Failed to fetch data: " + e.getMessage()));
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    final String jsonData = response.body().string();
+                    runOnUiThread(() -> profileTextView.setText(jsonData));
+                } else {
+                    runOnUiThread(() -> profileTextView.setText("Error: " + response.code()));
+                }
+            }
+        });
+    }
+
+
 }
