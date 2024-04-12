@@ -32,7 +32,7 @@ public class duoWrapped extends AppCompatActivity {
                     }
                 }
         );
-        myWrappedBtn = findViewById(R.id.duoWrappedButton);
+        myWrappedBtn = findViewById(R.id.myWrappedButton);
         myWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

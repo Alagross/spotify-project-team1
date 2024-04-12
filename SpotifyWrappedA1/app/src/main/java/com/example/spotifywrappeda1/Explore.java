@@ -30,7 +30,7 @@ public class Explore extends AppCompatActivity {
                     }
                 }
         );
-        myWrappedBtn = findViewById(R.id.duoWrappedButton);
+        myWrappedBtn = findViewById(R.id.myWrappedButton);
         myWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -40,7 +40,7 @@ public class Explore extends AppCompatActivity {
                     }
                 }
         );
-        duoWrappedBtn = findViewById(R.id.exploreButton);
+        duoWrappedBtn = findViewById(R.id.duoWrappedButton);
         duoWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

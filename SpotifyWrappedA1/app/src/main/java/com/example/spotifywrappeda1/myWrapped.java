@@ -14,7 +14,6 @@ public class myWrapped extends AppCompatActivity {
     Button exploreBtn;
     Button streamBtn;
 
-
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {

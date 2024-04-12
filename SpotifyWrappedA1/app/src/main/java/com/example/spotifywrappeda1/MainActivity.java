@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +15,8 @@ import com.spotify.sdk.android.auth.AuthorizationResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -25,8 +26,8 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     //Authorization for collecting bearer token:
-    public static final String CLIENT_ID = "f7840d7cc69342d8962efb9f52734f49";
-    public static final String REDIRECT_URI = "Spotify-SDK://auth";
+    public static final String CLIENT_ID = "f4391973fa0045cead227abc530e3b55";
+    public static final String REDIRECT_URI = "spotify-sdk://auth";
 
     public static final int AUTH_TOKEN_REQUEST_CODE = 0;
     public static final int AUTH_CODE_REQUEST_CODE = 1;
@@ -41,34 +42,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
 
-        // Initialize the views
-        tokenTextView = (TextView) findViewById(R.id.token_text_view);
-        codeTextView = (TextView) findViewById(R.id.code_text_view);
-        profileTextView = (TextView) findViewById(R.id.response_text_view);
+//        // Initialize the views
+//        tokenTextView = (TextView) findViewById(R.id.token_text_view);
+//        codeTextView = (TextView) findViewById(R.id.code_text_view);
+//        profileTextView = (TextView) findViewById(R.id.response_text_view);
+//
+//        // Initialize the buttons
+//        Button tokenBtn = (Button) findViewById(R.id.token_btn);
+//        Button codeBtn = (Button) findViewById(R.id.code_btn);
+//        Button profileBtn = (Button) findViewById(R.id.profile_btn);
+//
+//        // Set the click listeners for the buttons
+//
+//        tokenBtn.setOnClickListener((v) -> {
+//            getToken();
+//        });
+//
+//        codeBtn.setOnClickListener((v) -> {
+//            getCode();
+//        });
+//
+//        profileBtn.setOnClickListener((v) -> {
+//            onGetUserProfileClicked();
+//        });
 
-        // Initialize the buttons
-        Button tokenBtn = (Button) findViewById(R.id.token_btn);
-        Button codeBtn = (Button) findViewById(R.id.code_btn);
-        Button profileBtn = (Button) findViewById(R.id.profile_btn);
-
-        // Set the click listeners for the buttons
-
-        tokenBtn.setOnClickListener((v) -> {
-            getToken();
+        Button loginBtn = findViewById(R.id.loginButton);
+        loginBtn.setOnClickListener((v) -> {
+                getToken();
         });
 
-        codeBtn.setOnClickListener((v) -> {
-            getCode();
-        });
-
-        profileBtn.setOnClickListener((v) -> {
-            onGetUserProfileClicked();
-        });
-        Intent i = new Intent(getApplicationContext(), Login.class);
-        startActivity(i);
-        finish();
 
     }
 
@@ -107,11 +111,13 @@ public class MainActivity extends AppCompatActivity {
         // Check which request code is present (if any)
         if (AUTH_TOKEN_REQUEST_CODE == requestCode) {
             mAccessToken = response.getAccessToken();
-            setTextAsync(mAccessToken, tokenTextView);
+            getCode();
 
         } else if (AUTH_CODE_REQUEST_CODE == requestCode) {
             mAccessCode = response.getCode();
-            setTextAsync(mAccessCode, codeTextView);
+            Intent i = new Intent(getApplicationContext(), myWrapped.class);
+            startActivity(i);
+            finish();
         }
     }
 

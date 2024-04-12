@@ -30,7 +30,7 @@ public class Stream extends AppCompatActivity {
                     }
                 }
         );
-        myWrappedBtn = findViewById(R.id.duoWrappedButton);
+        myWrappedBtn = findViewById(R.id.myWrappedButton);
         myWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -40,17 +40,17 @@ public class Stream extends AppCompatActivity {
                     }
                 }
         );
-        duoWrappedBtn = findViewById(R.id.exploreButton);
+        duoWrappedBtn = findViewById(R.id.duoWrappedButton);
         duoWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(Stream.this, Explore.class);
+                        Intent i = new Intent(Stream.this, duoWrapped.class);
                         startActivity(i);
                     }
                 }
         );
-        exploreBtn = findViewById(R.id.streamButton);
+        exploreBtn = findViewById(R.id.exploreButton);
         exploreBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
