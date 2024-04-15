@@ -1,21 +1,36 @@
 package com.example.spotifywrappeda1;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.spotify.sdk.android.auth.AuthorizationClient;
 import com.spotify.sdk.android.auth.AuthorizationRequest;
 import com.spotify.sdk.android.auth.AuthorizationResponse;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.regex.Pattern;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -32,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
     public static final int AUTH_TOKEN_REQUEST_CODE = 0;
     public static final int AUTH_CODE_REQUEST_CODE = 1;
 
+    private FirebaseAuth mAuth;
+
     private final OkHttpClient mOkHttpClient = new OkHttpClient();
-    private String mAccessToken, mAccessCode;
+    public String mAccessToken, mAccessCode;
     private Call mCall;
 
     private TextView tokenTextView, codeTextView, profileTextView;
@@ -44,36 +61,99 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-//        // Initialize the views
-//        tokenTextView = (TextView) findViewById(R.id.token_text_view);
-//        codeTextView = (TextView) findViewById(R.id.code_text_view);
-//        profileTextView = (TextView) findViewById(R.id.response_text_view);
-//
-//        // Initialize the buttons
-//        Button tokenBtn = (Button) findViewById(R.id.token_btn);
-//        Button codeBtn = (Button) findViewById(R.id.code_btn);
-//        Button profileBtn = (Button) findViewById(R.id.profile_btn);
-//
-//        // Set the click listeners for the buttons
-//
-//        tokenBtn.setOnClickListener((v) -> {
-//            getToken();
-//        });
-//
-//        codeBtn.setOnClickListener((v) -> {
-//            getCode();
-//        });
-//
-//        profileBtn.setOnClickListener((v) -> {
-//            onGetUserProfileClicked();
-//        });
+        mAuth = FirebaseAuth.getInstance();
 
-        Button loginBtn = findViewById(R.id.loginButton);
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+
+        // FirebaseUser currentUser = mAuth.getCurrentUser();
+        Button loginBtn = findViewById(R.id.accountLoginBtn);
+        Button signupBtn = findViewById(R.id.accountSignupBtn);
+        Button deleteBtn = findViewById(R.id.accountDeleteBtn);
+
+
         loginBtn.setOnClickListener((v) -> {
-                getToken();
+
+            EditText emailText = findViewById(R.id.usernameEditText);
+            EditText passwordText = findViewById(R.id.passwordEditText);
+
+            String email = String.valueOf(emailText.getText());
+            String password = String.valueOf(passwordText.getText());
+
+            signIn();
         });
 
+        signupBtn.setOnClickListener((v) -> {
 
+            EditText emailText = findViewById(R.id.usernameEditText);
+            EditText passwordText = findViewById(R.id.passwordEditText);
+
+            String email = String.valueOf(emailText.getText());
+            String password = String.valueOf(passwordText.getText());
+
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        FirebaseUser newUser = mAuth.getCurrentUser();
+                        HashMap<String, Object> map = new HashMap<>();
+                        map.put("email", newUser.getUid());
+                        JSONArray jsonArray = new JSONArray();
+                        map.put("wraps", jsonArray.toString());
+                        database.collection("users").add(map);
+                        Toast.makeText(MainActivity.this, "Account Registered", Toast.LENGTH_LONG).show();
+
+                        getToken();
+
+                    }
+                }
+            });
+        });
+
+        deleteBtn.setOnClickListener((v) -> {
+            getToken();
+        });
+
+        profileTextView = findViewById(R.id.textViewResults);
+    }
+
+    private void signIn() {
+        EditText emailText = findViewById(R.id.usernameEditText);
+        EditText passwordText = findViewById(R.id.passwordEditText);
+        String email = String.valueOf(emailText.getText());
+        String password = String.valueOf(passwordText.getText());
+        if (!isValidEmail(email)) {
+            emailText.setError("Please enter a valid email");
+            emailText.requestFocus();
+        } else if (password.length() < 6) {
+            passwordText.setError("Password must be at least 6 characters");
+            passwordText.requestFocus();
+        } else {
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        getToken();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Error logging in", Toast.LENGTH_LONG).show();
+                        passwordText.setError("Password may be incorrect");
+                        passwordText.requestFocus();
+                    }
+                }
+            });
+        }
+    }
+
+    public static boolean isValidEmail(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
     }
 
     /**
