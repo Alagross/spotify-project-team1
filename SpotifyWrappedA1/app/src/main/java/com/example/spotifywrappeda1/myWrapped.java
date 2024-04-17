@@ -1,38 +1,26 @@
 package com.example.spotifywrappeda1;
 import android.annotation.SuppressLint;
-import android.content.ContentProviderOperation;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-import com.spotify.sdk.android.auth.AuthorizationClient;
-import com.spotify.sdk.android.auth.AuthorizationRequest;
-import com.spotify.sdk.android.auth.AuthorizationResponse;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.common.api.Response;
-
-import java.io.IOException;
 
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Request;
 import okhttp3.OkHttpClient;
 
 
 
 public class myWrapped extends AppCompatActivity {
     ImageButton settingsBtn;
-    Button duoWrappedBtn;
-    Button exploreBtn;
-    Button streamBtn;
+    Button pastWrapsBtn;
+    Button personalityBtn;
+    Button recommendBtn;
+    Button gameBtn;
 
     public TextView tokenTextView, codeTextView, profileTextView;
 
@@ -68,32 +56,42 @@ public class myWrapped extends AppCompatActivity {
                 }
         );
 
-        duoWrappedBtn = findViewById(R.id.duoWrappedButton);
-        duoWrappedBtn.setOnClickListener(
+        pastWrapsBtn = findViewById(R.id.pastWrapsButton);
+        pastWrapsBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(myWrapped.this, duoWrapped.class);
+                        Intent i = new Intent(myWrapped.this, pastWraps.class);
                         startActivity(i);
                     }
                 }
         );
-        exploreBtn = findViewById(R.id.exploreButton);
-        exploreBtn.setOnClickListener(
+        personalityBtn = findViewById(R.id.personalityButton);
+        personalityBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(myWrapped.this, Explore.class);
+                        Intent i = new Intent(myWrapped.this, Personality.class);
                         startActivity(i);
                     }
                 }
         );
-        streamBtn = findViewById(R.id.streamButton);
-        streamBtn.setOnClickListener(
+        recommendBtn = findViewById(R.id.recommendButton);
+        recommendBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(myWrapped.this, Stream.class);
+                        Intent i = new Intent(myWrapped.this, Recommend.class);
+                        startActivity(i);
+                    }
+                }
+        );
+        gameBtn = findViewById(R.id.gameButton);
+        gameBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(myWrapped.this, Game.class);
                         startActivity(i);
                     }
                 }
