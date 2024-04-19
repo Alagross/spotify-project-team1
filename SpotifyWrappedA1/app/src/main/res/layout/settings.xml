@@ -28,4 +28,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.156" />
 
+    <Switch
+        android:id="@+id/notificationsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications "
+        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <Button
+        android:id="@+id/editAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Account"
+        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
+        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <Button
+        android:id="@+id/deleteAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
+        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        tools:layout_editor_absoluteY="323dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
