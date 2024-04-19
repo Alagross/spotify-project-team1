@@ -100,7 +100,7 @@ public class Settings extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(Settings.this,editAccount.class);
+                        Intent i = new Intent(Settings.this, editAccount.class);
                         startActivity(i);
                     }
                 }
