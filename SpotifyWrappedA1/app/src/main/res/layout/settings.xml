@@ -36,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        app:layout_constraintVertical_bias="0.156"
         tools:layout_editor_absoluteY="184dp" />
 
     <Button
@@ -45,6 +46,7 @@
         android:text="Edit Account"
         app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
         app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        app:layout_constraintVertical_bias="0.156"
         tools:layout_editor_absoluteY="242dp" />
 
     <Button
@@ -54,6 +56,7 @@
         android:text="Delete Account"
         app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
         app:layout_constraintStart_toStartOf="@+id/darkModeButton"
+        app:layout_constraintVertical_bias="0.156"
         tools:layout_editor_absoluteY="323dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
