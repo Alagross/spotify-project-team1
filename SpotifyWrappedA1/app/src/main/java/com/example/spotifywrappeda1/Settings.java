@@ -19,7 +19,7 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
-
+        //Back Button functionality
         backBtn = findViewById(R.id.backButton);
         backBtn.setOnClickListener(
                 new View.OnClickListener() {
@@ -46,6 +46,14 @@ public class Settings extends AppCompatActivity {
                     }
                 }
         );
-
+        //Edit Account button functionality
+        Button editAccountButton = findViewById(R.id.editAccountButton);
+        editAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.this, EditAccount.class);
+                startActivity(intent);
+            }
+        });
     }
 }
