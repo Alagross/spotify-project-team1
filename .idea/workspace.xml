@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b841cc5-a320-4a10-b53c-f3a15fc1e38e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/myWrapped.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/java/com/example/spotifywrappeda1/myWrapped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/my_wrapped.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/app/src/main/res/layout/my_wrapped.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyWrappedA1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyWrappedA1/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="1b841cc5-a320-4a10-b53c-f3a15fc1e38e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +14,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
