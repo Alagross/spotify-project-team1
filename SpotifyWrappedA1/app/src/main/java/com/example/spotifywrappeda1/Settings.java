@@ -21,6 +21,7 @@ public class Settings extends AppCompatActivity {
     Button darkModeBtn;
     Button signoutBtn;
     Button deleteAccountBtn;
+    Button editAccountBtn;
     static boolean darkMode = false;
     static boolean deleteCheck = false;
 
@@ -91,6 +92,16 @@ public class Settings extends AppCompatActivity {
                             Toast.makeText(Settings.this, "Are you sure? All app account data will be deleted (not Spotify account)",
                                     Toast.LENGTH_SHORT);
                         }
+                    }
+                }
+        );
+        editAccountBtn = findViewById(R.id.editAccountButton);
+        editAccountBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(Settings.this,editAccount.class);
+                        startActivity(i);
                     }
                 }
         );
