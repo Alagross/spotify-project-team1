@@ -26,37 +26,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <Switch
         android:id="@+id/notificationsSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notifications "
-        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
-        app:layout_constraintVertical_bias="0.156"
-        tools:layout_editor_absoluteY="184dp" />
+        android:text="Notifications"
+        app:layout_constraintTop_toBottomOf="@id/darkModeButton"
+        app:layout_constraintStart_toStartOf="@id/darkModeButton"
+        app:layout_constraintEnd_toEndOf="@id/darkModeButton"
+        app:layout_constraintBottom_toTopOf="@+id/editAccountButton"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/editAccountButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit Account"
-        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
-        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
-        app:layout_constraintVertical_bias="0.156"
-        tools:layout_editor_absoluteY="242dp" />
+        app:layout_constraintTop_toBottomOf="@id/notificationsSwitch"
+        app:layout_constraintStart_toStartOf="@id/darkModeButton"
+        app:layout_constraintEnd_toEndOf="@id/darkModeButton"
+        app:layout_constraintBottom_toTopOf="@+id/deleteAccountButton"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/deleteAccountButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete Account"
-        app:layout_constraintEnd_toEndOf="@+id/darkModeButton"
-        app:layout_constraintStart_toStartOf="@+id/darkModeButton"
-        app:layout_constraintVertical_bias="0.156"
-        tools:layout_editor_absoluteY="323dp" />
+        app:layout_constraintTop_toBottomOf="@id/editAccountButton"
+        app:layout_constraintStart_toStartOf="@id/darkModeButton"
+        app:layout_constraintEnd_toEndOf="@id/darkModeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
