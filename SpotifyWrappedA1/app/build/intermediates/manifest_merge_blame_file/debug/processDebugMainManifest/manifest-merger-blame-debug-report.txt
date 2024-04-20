@@ -1,0 +1,498 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.spotifywrappeda1"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="33"
+9        android:targetSdkVersion="34" />
+10
+11    <queries>
+11-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:27:5-42:15
+12        <intent>
+12-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:28:9-30:18
+13            <action android:name="android.support.customtabs.action.CustomTabsService" />
+13-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:29:13-90
+13-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:29:21-87
+14        </intent>
+15
+16        <package android:name="com.spotify.music" />
+16-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:32:9-53
+16-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:32:18-50
+17        <package android:name="com.spotify.music.debug" />
+17-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:33:9-59
+17-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:33:18-56
+18        <package android:name="com.spotify.music.canary" />
+18-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:34:9-60
+18-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:34:18-57
+19        <package android:name="com.spotify.music.partners" />
+19-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:35:9-62
+19-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:35:18-59
+20
+21        <intent>
+21-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:37:9-41:18
+22            <action android:name="com.spotify.sso.action.START_AUTH_FLOW" />
+22-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:38:13-77
+22-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:38:21-74
+23
+24            <data android:mimeType="text/plain" />
+24-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:17-73
+25        </intent>
+26    </queries>
+27
+28    <uses-permission android:name="android.permission.INTERNET" />
+28-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:44:5-67
+28-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:44:22-64
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:5-79
+29-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:22-76
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:24:5-68
+30-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:24:22-65
+31    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+31-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:25:5-79
+31-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:25:22-76
+32    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+32-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:26:5-88
+32-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:26:22-85
+33    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+33-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:27:5-82
+33-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:27:22-79
+34    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+34-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b69cdb8f6c09570ff7d70cec68945ed3/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+34-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b69cdb8f6c09570ff7d70cec68945ed3/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+35    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+35-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:26:5-110
+35-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:26:22-107
+36
+37    <permission
+37-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+38        android:name="com.example.spotifywrappeda1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+40
+41    <uses-permission android:name="com.example.spotifywrappeda1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:5:5-59:19
+44        android:allowBackup="true"
+44-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:6:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.9.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2866626e828cb5d9e9200e464d082f11/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+46        android:dataExtractionRules="@xml/data_extraction_rules"
+46-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:7:9-65
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+49        android:fullBackupContent="@xml/backup_rules"
+49-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:8:9-54
+50        android:icon="@mipmap/ic_launcher"
+50-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:9:9-43
+51        android:label="@string/app_name"
+51-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:10:9-41
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:11:9-54
+53        android:supportsRtl="true"
+53-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:12:9-35
+54        android:testOnly="true"
+55        android:theme="@style/Theme.SpotifyWrappedA1" >
+55-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:13:9-54
+56        <activity
+56-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:15:9-29:20
+57            android:name="com.example.spotifywrappeda1.MainActivity"
+57-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:16:13-41
+58            android:exported="true" >
+58-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:17:13-36
+59            <intent-filter>
+59-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:18:13-22:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:19:17-69
+60-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:19:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:20:17-77
+62-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:20:27-74
+63            </intent-filter>
+64            <intent-filter>
+64-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:24:13-26:29
+65                <data
+65-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:17-73
+66                    android:host="auth"
+66-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:23-42
+67                    android:scheme="spotify-sdk" />
+67-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:43-71
+68            </intent-filter>
+69        </activity>
+70        <activity
+70-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:30:9-33:20
+71            android:name="com.example.spotifywrappeda1.Login"
+71-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:31:13-34
+72            android:exported="true" >
+72-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:32:13-36
+73        </activity>
+74        <activity
+74-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:34:9-37:20
+75            android:name="com.example.spotifywrappeda1.myWrapped"
+75-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:35:13-38
+76            android:exported="true" >
+76-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:36:13-36
+77        </activity>
+78        <activity
+78-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:38:9-41:20
+79            android:name="com.example.spotifywrappeda1.duoWrapped"
+79-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:39:13-39
+80            android:exported="true" >
+80-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:40:13-36
+81        </activity>
+82        <activity
+82-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:42:9-45:20
+83            android:name="com.example.spotifywrappeda1.Explore"
+83-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:43:13-36
+84            android:exported="true" >
+84-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:44:13-36
+85        </activity>
+86        <activity
+86-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:46:9-49:20
+87            android:name="com.example.spotifywrappeda1.Stream"
+87-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:47:13-35
+88            android:exported="true" >
+88-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:48:13-36
+89        </activity>
+90        <activity
+90-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:50:9-53:20
+91            android:name="com.example.spotifywrappeda1.Settings"
+91-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:51:13-37
+92            android:exported="true" >
+92-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:52:13-36
+93        </activity>
+94        <activity
+94-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:54:9-58:20
+95            android:name="com.example.spotifywrappeda1.SpotifyCalls"
+95-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:55:13-41
+96            android:exported="true" >
+96-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:56:13-36
+97        </activity>
+98        <activity
+98-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:47:9-61:20
+99            android:name="com.spotify.sdk.android.auth.browser.RedirectUriReceiverActivity"
+99-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:48:13-92
+100            android:exported="true"
+100-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:49:13-36
+101            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+101-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:50:13-72
+102            <intent-filter android:autoVerify="true" >
+102-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:51:13-60:29
+102-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:51:28-53
+103                <action android:name="android.intent.action.VIEW" />
+103-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:17-69
+103-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:25-66
+104
+105                <category android:name="android.intent.category.DEFAULT" />
+105-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:17-76
+105-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:27-73
+106                <category android:name="android.intent.category.BROWSABLE" />
+106-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:17-78
+106-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:27-75
+107
+108                <data
+108-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:17-73
+109                    android:host="auth"
+109-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:23-42
+110                    android:scheme="spotify-sdk" />
+110-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:43-71
+111            </intent-filter>
+112        </activity>
+113        <activity
+113-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:62:9-67:75
+114            android:name="com.spotify.sdk.android.auth.LoginActivity"
+114-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:63:13-70
+115            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
+115-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:64:13-115
+116            android:exported="false"
+116-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:65:13-37
+117            android:launchMode="singleTask"
+117-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:66:13-44
+118            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+118-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:67:13-72
+119        <activity
+119-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
+120            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+120-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
+121            android:excludeFromRecents="true"
+121-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
+122            android:exported="true"
+122-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
+123            android:launchMode="singleTask"
+123-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+124-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
+125            <intent-filter>
+125-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
+126                <action android:name="android.intent.action.VIEW" />
+126-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:17-69
+126-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:25-66
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:17-76
+128-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:27-73
+129                <category android:name="android.intent.category.BROWSABLE" />
+129-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:17-78
+129-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:27-75
+130
+131                <data
+131-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:17-73
+132                    android:host="firebase.auth"
+132-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:23-42
+133                    android:path="/"
+134                    android:scheme="genericidp" />
+134-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:43-71
+135            </intent-filter>
+136        </activity>
+137        <activity
+137-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
+138            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+138-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
+139            android:excludeFromRecents="true"
+139-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
+140            android:exported="true"
+140-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
+141            android:launchMode="singleTask"
+141-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
+142            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+142-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
+143            <intent-filter>
+143-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
+144                <action android:name="android.intent.action.VIEW" />
+144-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:17-69
+144-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:52:25-66
+145
+146                <category android:name="android.intent.category.DEFAULT" />
+146-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:17-76
+146-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:54:27-73
+147                <category android:name="android.intent.category.BROWSABLE" />
+147-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:17-78
+147-->[com.spotify.android:auth:2.1.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/f7476c97e5f259d604f9760f3ce5adf5/transformed/auth-2.1.1/AndroidManifest.xml:55:27-75
+148
+149                <data
+149-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:17-73
+150                    android:host="firebase.auth"
+150-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:23-42
+151                    android:path="/"
+152                    android:scheme="recaptcha" />
+152-->/Users/rithvikmattipalli/Documents/GitHub/spotify-project-team1/SpotifyWrappedA1/app/src/main/AndroidManifest.xml:25:43-71
+153            </intent-filter>
+154        </activity>
+155
+156        <service
+156-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:66:9-72:19
+157            android:name="com.google.firebase.components.ComponentDiscoveryService"
+157-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:67:13-84
+158            android:directBootAware="true"
+158-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:32:13-43
+159            android:exported="false" >
+159-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:68:13-37
+160            <meta-data
+160-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
+161                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+161-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
+162                android:value="com.google.firebase.components.ComponentRegistrar" />
+162-->[com.google.firebase:firebase-auth:22.3.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/b4f3fd1298cd281fb43c8597d9914c50/transformed/firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
+163            <meta-data
+163-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:17:13-19:85
+164                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+164-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:18:17-122
+165                android:value="com.google.firebase.components.ComponentRegistrar" />
+165-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:19:17-82
+166            <meta-data
+166-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:20:13-22:85
+167                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+167-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:21:17-111
+168                android:value="com.google.firebase.components.ComponentRegistrar" />
+168-->[com.google.firebase:firebase-firestore:24.11.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/cdcba103bf292a87844e1b4a5f94537f/transformed/firebase-firestore-24.11.1/AndroidManifest.xml:22:17-82
+169            <meta-data
+169-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:37:13-39:85
+170                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+170-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:38:17-139
+171                android:value="com.google.firebase.components.ComponentRegistrar" />
+171-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:39:17-82
+172            <meta-data
+172-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+173                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+173-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+175            <meta-data
+175-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+176                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+176-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+177                android:value="com.google.firebase.components.ComponentRegistrar" />
+177-->[com.google.firebase:firebase-installations:17.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/16bd5ee487037488567c5fbb154dc6ec/transformed/firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+178            <meta-data
+178-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/e5d4612e32c4a8a10b301c6ed708f3f5/transformed/firebase-common-ktx-20.4.3/AndroidManifest.xml:12:13-14:85
+179                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+179-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/e5d4612e32c4a8a10b301c6ed708f3f5/transformed/firebase-common-ktx-20.4.3/AndroidManifest.xml:13:17-116
+180                android:value="com.google.firebase.components.ComponentRegistrar" />
+180-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/e5d4612e32c4a8a10b301c6ed708f3f5/transformed/firebase-common-ktx-20.4.3/AndroidManifest.xml:14:17-82
+181            <meta-data
+181-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:35:13-37:85
+182                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+182-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:36:17-109
+183                android:value="com.google.firebase.components.ComponentRegistrar" />
+183-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:37:17-82
+184        </service>
+185
+186        <property
+186-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:30:9-32:61
+187            android:name="android.adservices.AD_SERVICES_CONFIG"
+187-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:31:13-65
+188            android:resource="@xml/ga_ad_services_config" />
+188-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/989c2dfd7bc2338f0833090d076fca02/transformed/play-services-measurement-api-21.6.1/AndroidManifest.xml:32:13-58
+189
+190        <provider
+190-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:23:9-28:39
+191            android:name="com.google.firebase.provider.FirebaseInitProvider"
+191-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:24:13-77
+192            android:authorities="com.example.spotifywrappeda1.firebaseinitprovider"
+192-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:25:13-72
+193            android:directBootAware="true"
+193-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:26:13-43
+194            android:exported="false"
+194-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:27:13-37
+195            android:initOrder="100" />
+195-->[com.google.firebase:firebase-common:20.4.3] /Users/rithvikmattipalli/.gradle/caches/transforms-3/413711a2869826363b9bba80471815e4/transformed/firebase-common-20.4.3/AndroidManifest.xml:28:13-36
+196
+197        <activity
+197-->[com.google.android.gms:play-services-base:18.0.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4828318d4e7ffa25de361785187383c2/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+198            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+198-->[com.google.android.gms:play-services-base:18.0.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4828318d4e7ffa25de361785187383c2/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+199            android:exported="false"
+199-->[com.google.android.gms:play-services-base:18.0.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4828318d4e7ffa25de361785187383c2/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+200            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+200-->[com.google.android.gms:play-services-base:18.0.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4828318d4e7ffa25de361785187383c2/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+201
+202        <receiver
+202-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:29:9-33:20
+203            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+203-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:30:13-85
+204            android:enabled="true"
+204-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:31:13-35
+205            android:exported="false" >
+205-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:32:13-37
+206        </receiver>
+207
+208        <service
+208-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:35:9-38:40
+209            android:name="com.google.android.gms.measurement.AppMeasurementService"
+209-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:36:13-84
+210            android:enabled="true"
+210-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:37:13-35
+211            android:exported="false" />
+211-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:38:13-37
+212        <service
+212-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:39:9-43:72
+213            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+213-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:40:13-87
+214            android:enabled="true"
+214-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:41:13-35
+215            android:exported="false"
+215-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:42:13-37
+216            android:permission="android.permission.BIND_JOB_SERVICE" />
+216-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/rithvikmattipalli/.gradle/caches/transforms-3/39b5c58de6814b546cef4550d9cd19b2/transformed/play-services-measurement-21.6.1/AndroidManifest.xml:43:13-69
+217
+218        <provider
+218-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+219            android:name="androidx.startup.InitializationProvider"
+219-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+220            android:authorities="com.example.spotifywrappeda1.androidx-startup"
+220-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+221            android:exported="false" >
+221-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+222            <meta-data
+222-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+223                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+223-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+224                android:value="androidx.startup" />
+224-->[androidx.emoji2:emoji2:1.2.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/2b15b6d92d08442629b78b22937b2496/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+225            <meta-data
+225-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4f3d3bac80032348ea698ecc1e063942/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+226                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+226-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4f3d3bac80032348ea698ecc1e063942/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+227                android:value="androidx.startup" />
+227-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/rithvikmattipalli/.gradle/caches/transforms-3/4f3d3bac80032348ea698ecc1e063942/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+228            <meta-data
+228-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+229                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+229-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+230                android:value="androidx.startup" />
+230-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+231        </provider>
+232
+233        <uses-library
+233-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/rithvikmattipalli/.gradle/caches/transforms-3/a12e7be2b512dd22dd267e2e14446bd3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+234            android:name="android.ext.adservices"
+234-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/rithvikmattipalli/.gradle/caches/transforms-3/a12e7be2b512dd22dd267e2e14446bd3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+235            android:required="false" />
+235-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/rithvikmattipalli/.gradle/caches/transforms-3/a12e7be2b512dd22dd267e2e14446bd3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+236        <uses-library
+236-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+237            android:name="androidx.window.extensions"
+237-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+238            android:required="false" />
+238-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+239        <uses-library
+239-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+240            android:name="androidx.window.sidecar"
+240-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+241            android:required="false" />
+241-->[androidx.window:window:1.0.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/fbc2f72761bad389ec7bb4c8e2e4a6db/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+242
+243        <meta-data
+243-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/38935799d6b6991cd16a5b2cd2189291/transformed/play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+244            android:name="com.google.android.gms.version"
+244-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/38935799d6b6991cd16a5b2cd2189291/transformed/play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+245            android:value="@integer/google_play_services_version" />
+245-->[com.google.android.gms:play-services-basement:18.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/38935799d6b6991cd16a5b2cd2189291/transformed/play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+246
+247        <receiver
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+248            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+249            android:directBootAware="false"
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+250            android:enabled="true"
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+251            android:exported="true"
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+252            android:permission="android.permission.DUMP" >
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+253            <intent-filter>
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+254                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+255            </intent-filter>
+256            <intent-filter>
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+257                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+257-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+257-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+258            </intent-filter>
+259            <intent-filter>
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+260                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+260-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+260-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+261            </intent-filter>
+262            <intent-filter>
+262-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+263                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+263-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+263-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/rithvikmattipalli/.gradle/caches/transforms-3/ed92f9ec5b41800346479e7c386f9949/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+264            </intent-filter>
+265        </receiver>
+266    </application>
+267
+268</manifest>
