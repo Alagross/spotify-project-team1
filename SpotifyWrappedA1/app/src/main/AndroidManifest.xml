@@ -36,15 +36,23 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".duoWrapped"
+            android:name=".pastWraps"
             android:exported="true">
         </activity>
         <activity
-            android:name=".Explore"
+            android:name=".Personality"
             android:exported="true">
         </activity>
         <activity
-            android:name=".Stream"
+            android:name=".Recommend"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Game"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".editAccount"
             android:exported="true">
         </activity>
         <activity

@@ -8,60 +8,59 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-public class duoWrapped extends AppCompatActivity {
+public class Game extends AppCompatActivity {
     ImageButton settingsBtn;
     Button myWrappedBtn;
-    Button exploreBtn;
-    Button streamBtn;
+    Button pastWrapsBtn;
+    Button personalityBtn;
+    Button recommendBtn;
 
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.duo_wrapped);
+        setContentView(R.layout.game);
 
-        settingsBtn = findViewById(R.id.settingsButton);
-        settingsBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(duoWrapped.this,Settings.class);
-                        startActivity(i);
-                    }
-                }
-        );
         myWrappedBtn = findViewById(R.id.myWrappedButton);
         myWrappedBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(duoWrapped.this, myWrapped.class);
+                        Intent i = new Intent(Game.this, myWrapped.class);
                         startActivity(i);
                     }
                 }
         );
-        exploreBtn = findViewById(R.id.exploreButton);
-        exploreBtn.setOnClickListener(
+        pastWrapsBtn = findViewById(R.id.pastWrapsButton);
+        pastWrapsBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(duoWrapped.this, Explore.class);
+                        Intent i = new Intent(Game.this, pastWraps.class);
                         startActivity(i);
                     }
                 }
         );
-        streamBtn = findViewById(R.id.streamButton);
-        streamBtn.setOnClickListener(
+        personalityBtn = findViewById(R.id.personalityButton);
+        personalityBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(duoWrapped.this, Stream.class);
+                        Intent i = new Intent(Game.this, Personality.class);
                         startActivity(i);
                     }
                 }
         );
-
+        recommendBtn = findViewById(R.id.recommendButton);
+        recommendBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(Game.this, Recommend.class);
+                        startActivity(i);
+                    }
+                }
+        );
     }
 }
