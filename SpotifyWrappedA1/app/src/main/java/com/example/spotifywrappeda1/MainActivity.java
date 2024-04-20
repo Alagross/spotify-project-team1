@@ -50,10 +50,14 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     private final OkHttpClient mOkHttpClient = new OkHttpClient();
-    public String mAccessToken, mAccessCode;
+    public static String mAccessToken, mAccessCode;
     private Call mCall;
 
     private TextView tokenTextView, codeTextView, profileTextView;
+
+    protected static String mAccessToken() {
+        return mAccessToken;
+    }
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // FirebaseUser currentUser = mAuth.getCurrentUser();
         Button loginBtn = findViewById(R.id.accountLoginBtn);
         Button signupBtn = findViewById(R.id.accountSignupBtn);
-        Button deleteBtn = findViewById(R.id.accountDeleteBtn);
+        //Button deleteBtn = findViewById(R.id.accountDeleteBtn);
 
 
         loginBtn.setOnClickListener((v) -> {
@@ -109,9 +113,9 @@ public class MainActivity extends AppCompatActivity {
             });
         });
 
-        deleteBtn.setOnClickListener((v) -> {
-            getToken();
-        });
+//        deleteBtn.setOnClickListener((v) -> {
+//            getToken();
+//        });
 
         profileTextView = findViewById(R.id.textViewResults);
     }
@@ -188,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         final AuthorizationResponse response = AuthorizationClient.getResponse(resultCode, data);
 
-        // Check which request code is present (if any)
         if (AUTH_TOKEN_REQUEST_CODE == requestCode) {
             mAccessToken = response.getAccessToken();
             getCode();
