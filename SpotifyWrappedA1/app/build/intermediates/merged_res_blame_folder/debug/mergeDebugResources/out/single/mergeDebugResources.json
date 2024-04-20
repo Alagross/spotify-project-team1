@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.spotifywrappeda1.app-debug-52:/layout_login.xml.flat",
+        "source": "com.example.spotifywrappeda1.app-main-54:/layout/login.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_settings.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/settings.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_login.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/login.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_personality.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/personality.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_recommend.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/recommend.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_game.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/game.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_activity_main.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_past_wraps.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/past_wraps.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/xml_backup_rules.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_edit_account.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/edit_account.xml"
+    },
+    {
+        "merged": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-debug-52:/layout_my_wrapped.xml.flat",
+        "source": "/Users/rithvikmattipalli/.gradle/daemon/8.4/com.example.spotifywrappeda1.app-main-54:/layout/my_wrapped.xml"
+    }
+]
