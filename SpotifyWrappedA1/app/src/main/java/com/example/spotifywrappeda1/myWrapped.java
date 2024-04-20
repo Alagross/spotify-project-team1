@@ -146,7 +146,11 @@ public class myWrapped extends MainActivity {
                         formattedData.append("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
                         final String formattedJsonData = formattedData.toString();
+
+
                         runOnUiThread(() -> profileTextView.setText(formattedJsonData));
+
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                         runOnUiThread(() -> profileTextView.setText("Failed to parse JSON: " + e.getMessage()));
@@ -161,7 +165,6 @@ public class myWrapped extends MainActivity {
             }
         });
     }
-
 }
 
 
