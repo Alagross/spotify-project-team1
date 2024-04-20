@@ -1,22 +1,18 @@
 package com.example.spotifywrappeda1;
+
+import static com.example.spotifywrappeda1.MainActivity.*;
+
 import android.annotation.SuppressLint;
-import android.content.ContentProviderOperation;
 import android.content.Intent;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
-import com.spotify.sdk.android.auth.AuthorizationClient;
-import com.spotify.sdk.android.auth.AuthorizationRequest;
-import com.spotify.sdk.android.auth.AuthorizationResponse;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.Response;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,26 +20,27 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-
-import okhttp3.Call;
+import okhttp3.*;
 import okhttp3.Callback;
-import okhttp3.Request;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
-
-public class myWrapped extends AppCompatActivity {
+public class myWrapped extends MainActivity {
     ImageButton settingsBtn;
     Button pastWrapsBtn;
     Button personalityBtn;
     Button recommendBtn;
     Button gameBtn;
 
+    private static final String SCOPES = "user-top-read";
+
+    public String mAccessToken = MainActivity.mAccessToken();
 
     public TextView tokenTextView, codeTextView, profileTextView;
-
-    private String mAccessToken, mAccessCode;
     private OkHttpClient mOkHttpClient = new OkHttpClient();
+    private Call mCall;
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
@@ -51,22 +48,32 @@ public class myWrapped extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_wrapped);
 
+        profileTextView = findViewById(R.id.textViewResults);
+
+        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.MATCH_PARENT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
+        params.topMargin = getResources().getDisplayMetrics().heightPixels / 3;
+
+        profileTextView.setMovementMethod(new ScrollingMovementMethod());
+        profileTextView.setLayoutParams(params);
+
+
         Button btnShortTerm = findViewById(R.id.buttonTopTracksShortTerm);
         Button btnMediumTerm = findViewById(R.id.buttonTopTracksMediumTerm);
         Button btnLongTerm = findViewById(R.id.buttonTopTracksLongTerm);
 
-//        btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term"));
-//        btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term"));
-//        btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term"));
-
+        btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term", SCOPES));
+        btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term", SCOPES));
+        btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term", SCOPES));
 
         settingsBtn = findViewById(R.id.settingsButton);
         settingsBtn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-
                         Intent i = new Intent(myWrapped.this,Settings.class);
                         startActivity(i);
                     }
@@ -114,8 +121,6 @@ public class myWrapped extends AppCompatActivity {
                     }
                 }
         );
-
-
     }
 
     private void fetchTopItems(String timeRange, String scopes) {
@@ -167,8 +172,5 @@ public class myWrapped extends AppCompatActivity {
             }
         });
     }
-
-
-
 
 }
