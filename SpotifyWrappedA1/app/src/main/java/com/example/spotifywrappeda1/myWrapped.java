@@ -5,11 +5,18 @@ import static com.example.spotifywrappeda1.MainActivity.*;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -26,6 +33,8 @@ public class myWrapped extends MainActivity {
     Button exploreBtn;
     Button streamBtn;
 
+    private static final String SCOPES = "user-top-read";
+
     public String mAccessToken = MainActivity.mAccessToken();
 
     public TextView tokenTextView, codeTextView, profileTextView;
@@ -40,13 +49,24 @@ public class myWrapped extends MainActivity {
 
         profileTextView = findViewById(R.id.textViewResults);
 
+        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.MATCH_PARENT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
+        params.topMargin = getResources().getDisplayMetrics().heightPixels / 3;
+
+        profileTextView.setMovementMethod(new ScrollingMovementMethod());
+        profileTextView.setLayoutParams(params);
+
+
         Button btnShortTerm = findViewById(R.id.buttonTopTracksShortTerm);
         Button btnMediumTerm = findViewById(R.id.buttonTopTracksMediumTerm);
         Button btnLongTerm = findViewById(R.id.buttonTopTracksLongTerm);
 
-        btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term"));
-        btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term"));
-        btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term"));
+        btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term", SCOPES));
+        btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term", SCOPES));
+        btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term", SCOPES));
 
         settingsBtn = findViewById(R.id.settingsButton);
         settingsBtn.setOnClickListener(
@@ -92,13 +112,13 @@ public class myWrapped extends MainActivity {
         );
     }
 
-    private void fetchTopItems(String timeRange) {
+    private void fetchTopItems(String timeRange, String scopes) {
         if (mAccessToken == null) {
             Toast.makeText(this, "Access Token is not available. Please get the token first.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String url = "https://api.spotify.com/v1/me/top/tracks?time_range=" + timeRange;
+        String url = "https://api.spotify.com/v1/me/top/tracks?time_range=" + timeRange + "&scope=" + scopes;
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("Authorization", "Bearer " + mAccessToken)
@@ -108,26 +128,39 @@ public class myWrapped extends MainActivity {
             @Override
             public void onResponse(Call call, okhttp3.Response response) throws IOException {
                 if (response.isSuccessful()) {
-                    System.out.println("A");
-                    final String jsonData = response.body().string();
-                    runOnUiThread(() -> profileTextView.setText(jsonData));
+                    String jsonData = response.body().string();
+                    try {
+                        JSONObject jsonObject = new JSONObject(jsonData);
+                        JSONArray itemsArray = jsonObject.getJSONArray("items");
+
+                        StringBuilder formattedData = new StringBuilder();
+                        for (int i = 0; i < itemsArray.length(); i++) {
+                            JSONObject item = itemsArray.getJSONObject(i);
+                            String trackName = item.getString("name");
+                            JSONArray artistsArray = item.getJSONArray("artists");
+                            String artistName = artistsArray.getJSONObject(0).getString("name");
+                            formattedData.append("Track: ").append(trackName).append("\n");
+                            formattedData.append("Artist: ").append(artistName).append("\n\n");
+                        }
+
+                        formattedData.append("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+                        final String formattedJsonData = formattedData.toString();
+                        runOnUiThread(() -> profileTextView.setText(formattedJsonData));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        runOnUiThread(() -> profileTextView.setText("Failed to parse JSON: " + e.getMessage()));
+                    }
                 } else {
                     runOnUiThread(() -> profileTextView.setText("Error: " + response.code()));
                 }
             }
-
             @Override
             public void onFailure(Call call, IOException e) {
                 runOnUiThread(() -> profileTextView.setText("Failed to fetch data: " + e.getMessage()));
             }
         });
     }
-
-
-
-
-
-
 
 }
 
