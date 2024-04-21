@@ -5,6 +5,8 @@ color green
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id Christmasbutton
+id Halloweenbutton
 id accountLoginBtn
 id accountSignupBtn
 id activity_main

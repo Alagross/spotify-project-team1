@@ -64,10 +64,14 @@ public class myWrapped extends MainActivity {
         Button btnShortTerm = findViewById(R.id.buttonTopTracksShortTerm);
         Button btnMediumTerm = findViewById(R.id.buttonTopTracksMediumTerm);
         Button btnLongTerm = findViewById(R.id.buttonTopTracksLongTerm);
+        Button btnHalloween = findViewById(R.id.Halloweenbutton);
+        Button btnChristmas = findViewById(R.id.Christmasbutton);
 
         btnShortTerm.setOnClickListener(v -> fetchTopItems("short_term", SCOPES));
         btnMediumTerm.setOnClickListener(v -> fetchTopItems("medium_term", SCOPES));
         btnLongTerm.setOnClickListener(v -> fetchTopItems("long_term", SCOPES));
+        btnHalloween.setOnClickListener(v -> fetchHalloweenTracks());
+        btnChristmas.setOnClickListener(v -> fetchChristmasTracks());
 
         settingsBtn = findViewById(R.id.settingsButton);
         settingsBtn.setOnClickListener(
@@ -169,6 +173,104 @@ public class myWrapped extends MainActivity {
             @Override
             public void onFailure(Call call, IOException e) {
                 runOnUiThread(() -> profileTextView.setText("Failed to fetch data: " + e.getMessage()));
+            }
+        });
+    }
+
+    private void fetchChristmasTracks() {
+        if (mAccessToken == null) {
+            Toast.makeText(this, "Access Token is not available. Please get the token first.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // URL for the Search API with a Christmas theme
+        String url = "https://api.spotify.com/v1/search?q=Christmas&type=track&market=US&limit=25";
+
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Authorization", "Bearer " + mAccessToken)
+                .build();
+
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                runOnUiThread(() -> profileTextView.setText("Failed to fetch data: " + e.getMessage()));
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    final String jsonData = response.body().string();
+                    runOnUiThread(() -> {
+                        try {
+                            // Parse the JSON data
+                            JSONObject jsonObject = new JSONObject(jsonData);
+                            JSONArray tracks = jsonObject.getJSONObject("tracks").getJSONArray("items");
+                            StringBuilder stringBuilder = new StringBuilder();
+                            for (int i = 0; i < tracks.length(); i++) {
+                                JSONObject track = tracks.getJSONObject(i);
+                                String name = track.getString("name");
+                                JSONArray artists = track.getJSONArray("artists");
+                                String artistName = artists.getJSONObject(0).getString("name");
+                                stringBuilder.append(name).append(" - ").append(artistName).append("\n");
+                            }
+                            profileTextView.setText(stringBuilder.toString());
+                        } catch (JSONException e) {
+                            profileTextView.setText("Failed to parse data: " + e.getMessage());
+                        }
+                    });
+                } else {
+                    runOnUiThread(() -> profileTextView.setText("Error: " + response.code()));
+                }
+            }
+        });
+    }
+
+    private void fetchHalloweenTracks() {
+        if (mAccessToken == null) {
+            Toast.makeText(this, "Access Token is not available. Please get the token first.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // URL for the Search API with a Halloween theme
+        String url = "https://api.spotify.com/v1/search?q=Halloween&type=track&market=US&limit=25";
+
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Authorization", "Bearer " + mAccessToken)
+                .build();
+
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                runOnUiThread(() -> profileTextView.setText("Failed to fetch data: " + e.getMessage()));
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    final String jsonData = response.body().string();
+                    runOnUiThread(() -> {
+                        try {
+                            // Parse the JSON data
+                            JSONObject jsonObject = new JSONObject(jsonData);
+                            JSONArray tracks = jsonObject.getJSONObject("tracks").getJSONArray("items");
+                            StringBuilder stringBuilder = new StringBuilder();
+                            for (int i = 0; i < tracks.length(); i++) {
+                                JSONObject track = tracks.getJSONObject(i);
+                                String name = track.getString("name");
+                                JSONArray artists = track.getJSONArray("artists");
+                                String artistName = artists.getJSONObject(0).getString("name");
+                                stringBuilder.append(name).append(" - ").append(artistName).append("\n");
+                            }
+                            profileTextView.setText(stringBuilder.toString());
+                        } catch (JSONException e) {
+                            profileTextView.setText("Failed to parse data: " + e.getMessage());
+                        }
+                    });
+                } else {
+                    runOnUiThread(() -> profileTextView.setText("Error: " + response.code()));
+                }
             }
         });
     }

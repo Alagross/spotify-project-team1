@@ -3164,7 +3164,9 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Christmasbutton
 id FUNCTION
+id Halloweenbutton
 id META
 id NO_DEBUG
 id SHIFT
