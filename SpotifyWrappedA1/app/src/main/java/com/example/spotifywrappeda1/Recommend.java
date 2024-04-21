@@ -48,6 +48,7 @@ public class Recommend extends AppCompatActivity {
 
 
 
+
         settingsBtn = findViewById(R.id.settingsButton);
         settingsBtn.setOnClickListener(
                 new View.OnClickListener() {
@@ -165,6 +166,8 @@ public class Recommend extends AppCompatActivity {
                         if (items.length() > 0) {
                             JSONObject topArtist = items.getJSONObject(0); // Assuming we choose the first artist
                             String artistName = topArtist.getString("name");
+                            String artistId = topArtist.getString("id");
+                            getRecommendations(mAccessToken, artistId);
                             Log.d(TAG, "Top artist: " + artistName);
                         } else {
                             Log.e(TAG, "No top artist found");
